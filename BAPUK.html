@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BAPUK Bandeng Gepuk | LyzzStore</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #f4b942;
+    --gold-light: #ffd76a;
+    --orange: #f07818;
+    --dark: #151515;
+    --dark2: #202020;
+    --cream: #fff8eb;
+    --white: #ffffff;
+    --gray: #777;
+    --green: #20c878;
+    --red: #e74747;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(21, 21, 21, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 72px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--orange));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    box-shadow: 0 5px 20px rgba(244,185,66,.25);
+}
+
+.logo-text {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 29px;
+    letter-spacing: 2px;
+}
+
+.logo-text span {
+    color: var(--gold);
+}
+
+.cart-btn {
+    position: relative;
+    border: 0;
+    cursor: pointer;
+    background: #292929;
+    color: white;
+
+    padding: 12px 17px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: .25s;
+}
+
+.cart-btn:hover {
+    background: var(--gold);
+    color: #111;
+    transform: translateY(-2px);
+}
+
+.cart-count {
+    min-width: 21px;
+    height: 21px;
+    padding: 0 5px;
+    border-radius: 50%;
+
+    background: var(--orange);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 610px;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(244,185,66,.18), transparent 30%),
+        linear-gradient(135deg, #151515, #292929);
+
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(244,185,66,.06);
+    right: -160px;
+    top: -100px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    min-height: 610px;
+    margin: auto;
+    padding: 60px 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-small {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(60px, 8vw, 105px);
+    line-height: .85;
+    letter-spacing: 2px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-subtitle {
+    margin-top: 25px;
+    max-width: 520px;
+    color: #d4d4d4;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.hero-badge {
+    display: inline-flex;
+    margin-top: 28px;
+
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.13);
+
+    padding: 12px 17px;
+    border-radius: 100px;
+
+    font-weight: 700;
+    color: var(--gold-light);
+}
+
+.hero-image-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image-bg {
+    width: min(460px, 90vw);
+    height: min(460px, 90vw);
+
+    border-radius: 50%;
+    background: radial-gradient(circle, #f7cb63, #e87919);
+
+    position: absolute;
+    opacity: .95;
+}
+
+.hero-image {
+    width: min(440px, 85vw);
+    height: min(440px, 85vw);
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    position: relative;
+    z-index: 2;
+
+    border: 9px solid rgba(255,255,255,.85);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.5),
+        0 0 0 14px rgba(244,185,66,.12);
+
+    transition: .5s;
+}
+
+.hero-image:hover {
+    transform: scale(1.03) rotate(1deg);
+}
+
+/* ================= SECTION ================= */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: var(--orange);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 54px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.section-title p {
+    color: var(--gray);
+    margin-top: 8px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+
+    border: 1px solid #eee;
+
+    box-shadow: 0 15px 45px rgba(30,20,5,.07);
+
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 25px 60px rgba(30,20,5,.13);
+}
+
+.product-top {
+    padding: 30px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(244,185,66,.18), transparent 30%),
+        #fffaf0;
+}
+
+.product-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+
+    background: #191919;
+    color: var(--gold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Bebas Neue";
+    font-size: 21px;
+}
+
+.product-name {
+    margin-top: 20px;
+    font-family: "Bebas Neue";
+    font-size: 37px;
+    letter-spacing: 1px;
+}
+
+.product-desc {
+    color: #777;
+    margin-top: 7px;
+    line-height: 1.6;
+}
+
+.price {
+    margin-top: 20px;
+    font-family: "Bebas Neue";
+    font-size: 38px;
+    color: var(--orange);
+}
+
+.price small {
+    font-family: "DM Sans";
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.product-body {
+    padding: 25px 30px 30px;
+}
+
+.option-title {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.cooking-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.cooking-option {
+    position: relative;
+}
+
+.cooking-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.cooking-option label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 8px;
+
+    border: 2px solid #eee;
+    border-radius: 13px;
+
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.cooking-option input:checked + label {
+    border-color: var(--orange);
+    background: #fff4e6;
+    color: var(--orange);
+}
+
+.quantity-row {
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.qty-btn {
+    width: 38px;
+    height: 38px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: #191919;
+    color: white;
+
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.qty-btn:hover {
+    background: var(--orange);
+}
+
+.qty-value {
+    min-width: 25px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.add-btn {
+    width: 100%;
+    margin-top: 23px;
+
+    border: 0;
+    border-radius: 14px;
+
+    padding: 15px;
+
+    background: linear-gradient(135deg, var(--orange), var(--gold));
+    color: #151515;
+
+    font-size: 15px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(240,120,24,.2);
+    transition: .25s;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(240,120,24,.3);
+}
+
+/* ================= INFO ================= */
+
+.info-section {
+    background: #191919;
+    color: white;
+}
+
+.info-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-box {
+    padding: 28px;
+    background: #242424;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.07);
+}
+
+.info-icon {
+    font-size: 32px;
+}
+
+.info-box h3 {
+    margin-top: 14px;
+    font-size: 18px;
+}
+
+.info-box p {
+    margin-top: 8px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* ================= CART MODAL ================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    background: rgba(0,0,0,.65);
+    backdrop-filter: blur(5px);
+
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.cart-modal {
+    width: 100%;
+    max-width: 650px;
+    max-height: 92vh;
+
+    background: #fff;
+    border-radius: 28px 28px 0 0;
+
+    overflow-y: auto;
+
+    animation: slideUp .3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.cart-header {
+    padding: 22px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eee;
+
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 3;
+}
+
+.cart-header h2 {
+    font-family: "Bebas Neue";
+    font-size: 32px;
+}
+
+.close-btn {
+    width: 38px;
+    height: 38px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #f2f2f2;
+
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cart-content {
+    padding: 22px 25px 30px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 45px 15px;
+    color: #999;
+}
+
+.empty-cart-icon {
+    font-size: 50px;
+    margin-bottom: 12px;
+}
+
+.cart-item {
+    padding: 17px 0;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-name {
+    font-weight: 800;
+}
+
+.cart-item-option {
+    margin-top: 5px;
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.cart-item-price {
+    margin-top: 7px;
+    color: #777;
+    font-size: 13px;
+}
+
+.cart-item-right {
+    text-align: right;
+}
+
+.cart-subtotal {
+    font-weight: 900;
+}
+
+.item-controls {
+    margin-top: 9px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 7px;
+}
+
+.small-btn {
+    width: 29px;
+    height: 29px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #eee;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.delete-btn {
+    background: #ffe9e9;
+    color: var(--red);
+}
+
+.total-box {
+    margin-top: 25px;
+    padding: 20px;
+
+    background: #191919;
+    color: white;
+
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-box span:first-child {
+    color: #aaa;
+}
+
+.total-price {
+    font-family: "Bebas Neue";
+    color: var(--gold);
+    font-size: 34px;
+}
+
+/* ================= CHECKOUT ================= */
+
+.checkout {
+    margin-top: 25px;
+}
+
+.checkout h3 {
+    font-family: "Bebas Neue";
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    margin-bottom: 13px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+
+    border: 2px solid #eee;
+    border-radius: 12px;
+
+    padding: 13px 14px;
+
+    font-family: "DM Sans";
+    font-size: 14px;
+
+    outline: none;
+    transition: .2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--orange);
+}
+
+.input-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.wa-order-btn {
+    width: 100%;
+    margin-top: 8px;
+
+    padding: 16px;
+
+    border: 0;
+    border-radius: 14px;
+
+    background: var(--green);
+    color: white;
+
+    font-size: 15px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.wa-order-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(.95);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #101010;
+    color: white;
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.footer-brand {
+    font-family: "Bebas Neue";
+    font-size: 37px;
+    letter-spacing: 2px;
+}
+
+.footer-brand span {
+    color: var(--gold);
+}
+
+.footer-tagline {
+    color: #999;
+    margin-top: 8px;
+}
+
+.lyzz {
+    margin-top: 25px;
+    color: #777;
+    font-size: 13px;
+}
+
+.lyzz strong {
+    color: var(--gold);
+    font-family: "Pacifico", cursive;
+    font-size: 17px;
+}
+
+/* ================= FLOATING WA ================= */
+
+.floating-wa {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: 27px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+    z-index: 1000;
+
+    transition: .25s;
+}
+
+.floating-wa:hover {
+    transform: scale(1.08);
+}
+
+/* ================= TOAST ================= */
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 90px;
+
+    transform: translate(-50%, 30px);
+
+    background: #191919;
+    color: white;
+
+    padding: 13px 19px;
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    opacity: 0;
+    pointer-events: none;
+
+    z-index: 3000;
+
+    transition: .3s;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image-wrap {
+        order: -1;
+    }
+
+    .hero-image {
+        width: min(330px, 80vw);
+        height: min(330px, 80vw);
+    }
+
+    .hero-image-bg {
+        width: min(350px, 83vw);
+        height: min(350px, 83vw);
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .logo-text {
+        font-size: 25px;
+    }
+
+    .cart-btn {
+        padding: 10px 12px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-container {
+        min-height: auto;
+        padding: 45px 17px 65px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 45px;
+    }
+
+    .product-top,
+    .product-body {
+        padding: 23px;
+    }
+
+    .product-name {
+        font-size: 33px;
+    }
+
+    .cart-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .floating-wa {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+            <div class="logo-icon">🐟</div>
+
+            <div class="logo-text">
+                BAPUK <span>Gepuk</span>
+            </div>
+        </a>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 Keranjang
+
+            <span class="cart-count" id="cartCount">
+                0
+            </span>
+        </button>
+
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                Lezat • Praktis • Bikin Nagih
+            </div>
+
+            <h1>
+                BAPUK<br>
+                <span>BANDENG</span><br>
+                GEPUK
+            </h1>
+
+            <p class="hero-subtitle">
+                Nikmati bandeng gepuk dengan cita rasa gurih
+                dan lezat. Pilih dengan wadah atau tanpa wadah,
+                lalu tentukan mau digoreng atau tidak.
+            </p>
+
+            <div class="hero-badge">
+                🔥 Pesan Sekarang • Langsung via WhatsApp
+            </div>
+
+        </div>
+
+
+        <div class="hero-image-wrap">
+
+            <div class="hero-image-bg"></div>
+
+            <img
+                src="bandeng.jpg"
+                alt="BAPUK Bandeng Gepuk"
+                class="hero-image"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUK ================= -->
+
+<section class="section" id="produk">
+
+    <div class="section-title">
+
+        <div class="section-label">
+            Menu BAPUK
+        </div>
+
+        <h2>
+            Pilih Pesananmu
+        </h2>
+
+        <p>
+            Tentukan pilihan dan masukkan ke keranjang.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+        <!-- PRODUK 1 -->
+
+        <div class="product-card">
+
+            <div class="product-top">
+
+                <div class="product-number">
+                    01
+                </div>
+
+                <div class="product-name">
+                    Bandeng Gepuk + Wadah
+                </div>
+
+                <div class="product-desc">
+                    Cocok untuk kamu yang ingin langsung
+                    membawa pulang bandeng gepuk dengan wadah.
+                </div>
+
+                <div class="price">
+                    Rp27.000
+                    <small>/ pcs</small>
+                </div>
+
+            </div>
+
+
+            <div class="product-body">
+
+                <div class="option-title">
+                    Pilih Penyajian
+                </div>
+
+                <div class="cooking-options">
+
+                    <div class="cooking-option">
+
+                        <input
+                            type="radio"
+                            name="fryWadah"
+                            id="gorengWadah"
+                            value="Digoreng"
+                        >
+
+                        <label for="gorengWadah">
+                            🍳 Digoreng
+                        </label>
+
+                    </div>
+
+
+                    <div class="cooking-option">
+
+                        <input
+                            type="radio"
+                            name="fryWadah"
+                            id="tidakGorengWadah"
+                            value="Tidak Digoreng"
+                        >
+
+                        <label for="tidakGorengWadah">
+                            🐟 Tidak Digoreng
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quantity-row">
+
+                    <span class="option-title" style="margin:0;">
+                        Jumlah
+                    </span>
+
+                    <div class="quantity-control">
+
+                        <button
+                            class="qty-btn"
+                            onclick="changeQty('wadah', -1)"
+                        >
+                            −
+                        </button>
+
+                        <span
+                            class="qty-value"
+                            id="qtyWadah"
+                        >
+                            1
+                        </span>
+
+                        <button
+                            class="qty-btn"
+                            onclick="changeQty('wadah', 1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('wadah')"
+                >
+                    🛒 Tambahkan ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUK 2 -->
+
+        <div class="product-card">
+
+            <div class="product-top">
+
+                <div class="product-number">
+                    02
+                </div>
+
+                <div class="product-name">
+                    Bandeng Gepuk Tanpa Wadah
+                </div>
+
+                <div class="product-desc">
+                    Pilihan ekonomis untuk kamu yang
+                    tidak membutuhkan wadah.
+                </div>
+
+                <div class="price">
+                    Rp25.000
+                    <small>/ pcs</small>
+                </div>
+
+            </div>
+
+
+            <div class="product-body">
+
+                <div class="option-title">
+                    Pilih Penyajian
+                </div>
+
+                <div class="cooking-options">
+
+                    <div class="cooking-option">
+
+                        <input
+                            type="radio"
+                            name="fryTanpa"
+                            id="gorengTanpa"
+                            value="Digoreng"
+                        >
+
+                        <label for="gorengTanpa">
+                            🍳 Digoreng
+                        </label>
+
+                    </div>
+
+
+                    <div class="cooking-option">
+
+                        <input
+                            type="radio"
+                            name="fryTanpa"
+                            id="tidakGorengTanpa"
+                            value="Tidak Digoreng"
+                        >
+
+                        <label for="tidakGorengTanpa">
+                            🐟 Tidak Digoreng
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quantity-row">
+
+                    <span
+                        class="option-title"
+                        style="margin:0;"
+                    >
+                        Jumlah
+                    </span>
+
+                    <div class="quantity-control">
+
+                        <button
+                            class="qty-btn"
+                            onclick="changeQty('tanpa', -1)"
+                        >
+                            −
+                        </button>
+
+                        <span
+                            class="qty-value"
+                            id="qtyTanpa"
+                        >
+                            1
+                        </span>
+
+                        <button
+                            class="qty-btn"
+                            onclick="changeQty('tanpa', 1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('tanpa')"
+                >
+                    🛒 Tambahkan ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INFO ================= -->
+
+<section class="info-section">
+
+    <div class="info-grid">
+
+        <div class="info-box">
+
+            <div class="info-icon">
+                🐟
+            </div>
+
+            <h3>
+                Bandeng Pilihan
+            </h3>
+
+            <p>
+                Bandeng gepuk dengan rasa gurih,
+                lezat, dan cocok dinikmati kapan saja.
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <div class="info-icon">
+                🍳
+            </div>
+
+            <h3>
+                Pilih Penyajian
+            </h3>
+
+            <p>
+                Pilih sesuai selera kamu:
+                digoreng atau tidak digoreng.
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <div class="info-icon">
+                💬
+            </div>
+
+            <h3>
+                Pesan via WhatsApp
+            </h3>
+
+            <p>
+                Masukkan pesanan ke keranjang,
+                lalu kirim pesanan langsung ke BAPUK.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KERANJANG ================= -->
+
+<div
+    class="modal"
+    id="cartModal"
+    onclick="closeCartOutside(event)"
+>
+
+    <div class="cart-modal">
+
+        <div class="cart-header">
+
+            <h2>
+                🛒 Keranjang Pesanan
+            </h2>
+
+            <button
+                class="close-btn"
+                onclick="closeCart()"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="cart-content">
+
+            <div id="cartItems"></div>
+
+
+            <div
+                id="cartBottom"
+                style="display:none;"
+            >
+
+                <!-- TOTAL -->
+
+                <div class="total-box">
+
+                    <span>
+                        Total Pesanan
+                    </span>
+
+                    <span
+                        class="total-price"
+                        id="totalPrice"
+                    >
+                        Rp0
+                    </span>
+
+                </div>
+
+
+                <!-- DATA PEMESAN -->
+
+                <div class="checkout">
+
+                    <h3>
+                        Data Pemesan
+                    </h3>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Nama Pemesan
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Masukkan nama kamu"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Catatan
+                            <span style="color:#999;">
+                                (opsional)
+                            </span>
+                        </label>
+
+                        <textarea
+                            id="customerNote"
+                            placeholder="Contoh: Tolong diproses sore..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        class="wa-order-btn"
+                        onclick="sendWhatsApp()"
+                    >
+                        💬 Pesan Sekarang via WhatsApp
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+    class="toast"
+    id="toast"
+></div>
+
+
+<!-- ================= WHATSAPP FLOATING ================= -->
+
+<a
+    href="https://wa.me/6281385861215"
+    target="_blank"
+    class="floating-wa"
+    aria-label="WhatsApp BAPUK"
+>
+    💬
+</a>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-brand">
+        BAPUK <span>BANDENG GEPUK</span>
+    </div>
+
+    <div class="footer-tagline">
+        Gurihnya bikin balik lagi.
+    </div>
+
+    <div class="lyzz">
+
+        Website by
+
+        <strong>
+            LyzzStore
+        </strong>
+
+    </div>
+
+    <div
+        style="
+            margin-top:15px;
+            color:#555;
+            font-size:11px;
+        "
+    >
+        © 2026 BAPUK Bandeng Gepuk
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+const nomorWhatsApp = "6281385861215";
+
+
+/* ================= PRODUK ================= */
+
+const products = {
+
+    wadah: {
+        nama: "Bandeng Gepuk + Wadah",
+        harga: 27000
+    },
+
+    tanpa: {
+        nama: "Bandeng Gepuk Tanpa Wadah",
+        harga: 25000
+    }
+
+};
+
+
+/* ================= JUMLAH ================= */
+
+let productQty = {
+
+    wadah: 1,
+
+    tanpa: 1
+
+};
+
+
+/* ================= KERANJANG ================= */
+
+let cart = [];
+
+
+/* ================= UBAH JUMLAH PRODUK ================= */
+
+function changeQty(type, amount) {
+
+    productQty[type] += amount;
+
+    if (productQty[type] < 1) {
+        productQty[type] = 1;
+    }
+
+    const element = document.getElementById(
+        type === "wadah"
+            ? "qtyWadah"
+            : "qtyTanpa"
+    );
+
+    element.textContent = productQty[type];
+
+}
+
+
+/* ================= TAMBAH KERANJANG ================= */
+
+function addToCart(type) {
+
+    let selectedCooking;
+
+    if (type === "wadah") {
+
+        const selected =
+            document.querySelector(
+                'input[name="fryWadah"]:checked'
+            );
+
+        if (!selected) {
+
+            showToast(
+                "⚠️ Pilih Digoreng atau Tidak Digoreng dulu."
+            );
+
+            return;
+        }
+
+        selectedCooking = selected.value;
+
+    }
+
+    else {
+
+        const selected =
+            document.querySelector(
+                'input[name="fryTanpa"]:checked'
+            );
+
+        if (!selected) {
+
+            showToast(
+                "⚠️ Pilih Digoreng atau Tidak Digoreng dulu."
+            );
+
+            return;
+        }
+
+        selectedCooking = selected.value;
+
+    }
+
+
+    const product = products[type];
+
+    const qty = productQty[type];
+
+
+    /*
+       Produk yang sama dengan
+       pilihan penyajian yang sama
+       akan digabung jumlahnya.
+    */
+
+    const existingIndex = cart.findIndex(
+        item =>
+            item.type === type &&
+            item.goreng === selectedCooking
+    );
+
+
+    if (existingIndex !== -1) {
+
+        cart[existingIndex].jumlah += qty;
+
+    }
+
+    else {
+
+        cart.push({
+
+            type: type,
+
+            nama: product.nama,
+
+            harga: product.harga,
+
+            goreng: selectedCooking,
+
+            jumlah: qty
+
+        });
+
+    }
+
+
+    updateCart();
+
+    showToast(
+        "✅ Pesanan berhasil ditambahkan!"
+    );
+
+}
+
+
+/* ================= UPDATE CART ================= */
+
+function updateCart() {
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartBottom =
+        document.getElementById("cartBottom");
+
+    const cartCount =
+        document.getElementById("cartCount");
+
+    const totalPrice =
+        document.getElementById("totalPrice");
+
+
+    let totalItems = 0;
+
+    let total = 0;
+
+
+    cart.forEach(item => {
+
+        totalItems += item.jumlah;
+
+        total +=
+            item.harga * item.jumlah;
+
+    });
+
+
+    cartCount.textContent = totalItems;
+
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+
+            <div class="empty-cart">
+
+                <div class="empty-cart-icon">
+                    🛒
+                </div>
+
+                <strong>
+                    Keranjang masih kosong
+                </strong>
+
+                <p style="margin-top:6px;">
+                    Yuk pilih menu BAPUK terlebih dahulu.
+                </p>
+
+            </div>
+
+        `;
+
+        cartBottom.style.display = "none";
+
+        return;
+
+    }
+
+
+    cartBottom.style.display = "block";
+
+
+    cartItems.innerHTML = cart.map(
+        (item, index) => {
+
+            const subtotal =
+                item.harga * item.jumlah;
+
+
+            return `
+
+                <div class="cart-item">
+
+                    <div>
+
+                        <div class="cart-item-name">
+                            ${item.nama}
+                        </div>
+
+                        <div class="cart-item-option">
+                            ${
+                                item.goreng === "Digoreng"
+                                ? "🍳 Digoreng"
+                                : "🐟 Tidak Digoreng"
+                            }
+                        </div>
+
+                        <div class="cart-item-price">
+                            ${formatRupiah(item.harga)}
+                            × ${item.jumlah}
+                        </div>
+
+                    </div>
+
+
+                    <div class="cart-item-right">
+
+                        <div class="cart-subtotal">
+                            ${formatRupiah(subtotal)}
+                        </div>
+
+
+                        <div class="item-controls">
+
+                            <button
+                                class="small-btn"
+                                onclick="changeCartQty(${index}, -1)"
+                            >
+                                −
+                            </button>
+
+                            <span>
+                                ${item.jumlah}
+                            </span>
+
+                            <button
+                                class="small-btn"
+                                onclick="changeCartQty(${index}, 1)"
+                            >
+                                +
+                            </button>
+
+                            <button
+                                class="small-btn delete-btn"
+                                onclick="deleteCartItem(${index})"
+                            >
+                                ✕
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+    ).join("");
+
+
+    totalPrice.textContent =
+        formatRupiah(total);
+
+}
+
+
+/* ================= JUMLAH DI CART ================= */
+
+function changeCartQty(index, amount) {
+
+    cart[index].jumlah += amount;
+
+
+    if (cart[index].jumlah <= 0) {
+
+        cart.splice(index, 1);
+
+    }
+
+
+    updateCart();
+
+}
+
+
+/* ================= HAPUS ITEM ================= */
+
+function deleteCartItem(index) {
+
+    cart.splice(index, 1);
+
+    updateCart();
+
+    showToast(
+        "🗑️ Pesanan dihapus."
+    );
+
+}
+
+
+/* ================= FORMAT RUPIAH ================= */
+
+function formatRupiah(number) {
+
+    return new Intl.NumberFormat(
+        "id-ID",
+        {
+            style: "currency",
+            currency: "IDR",
+            maximumFractionDigits: 0
+        }
+    ).format(number);
+
+}
+
+
+/* ================= BUKA CART ================= */
+
+function openCart() {
+
+    updateCart();
+
+    document
+        .getElementById("cartModal")
+        .classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* ================= TUTUP CART ================= */
+
+function closeCart() {
+
+    document
+        .getElementById("cartModal")
+        .classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* ================= KLIK LUAR ================= */
+
+function closeCartOutside(event) {
+
+    if (
+        event.target.id === "cartModal"
+    ) {
+
+        closeCart();
+
+    }
+
+}
+
+
+/* ================= TOAST ================= */
+
+let toastTimer;
+
+function showToast(message) {
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+
+    clearTimeout(toastTimer);
+
+
+    toastTimer = setTimeout(
+        () => {
+
+            toast.classList.remove("show");
+
+        },
+        2500
+    );
+
+}
+
+
+/* ================= WHATSAPP ================= */
+
+function sendWhatsApp() {
+
+    if (cart.length === 0) {
+
+        showToast(
+            "⚠️ Keranjang masih kosong."
+        );
+
+        return;
+
+    }
+
+
+    const customerName =
+        document
+            .getElementById("customerName")
+            .value
+            .trim();
+
+
+    const customerNote =
+        document
+            .getElementById("customerNote")
+            .value
+            .trim();
+
+
+    if (!customerName) {
+
+        showToast(
+            "⚠️ Masukkan nama pemesan terlebih dahulu."
+        );
+
+        document
+            .getElementById("customerName")
+            .focus();
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+    let totalItems = 0;
+
+
+    let message =
+`🐟 *PESANAN BAPUK BANDENG GEPUK*
+
+Halo BAPUK, saya ingin memesan:
+
+`;
+
+
+    cart.forEach(
+        (item, index) => {
+
+            const subtotal =
+                item.harga * item.jumlah;
+
+
+            total += subtotal;
+
+            totalItems += item.jumlah;
+
+
+            message +=
+`
+${index + 1}. *${item.nama}*
+   Penyajian: ${item.goreng}
+   Jumlah: ${item.jumlah} pcs
+   Harga: ${formatRupiah(item.harga)}
+   Subtotal: ${formatRupiah(subtotal)}
+`;
+
+        }
+    );
+
+
+    message +=
+`
+━━━━━━━━━━━━━━━━━━
+🛍️ Total Item: ${totalItems} pcs
+💰 *TOTAL: ${formatRupiah(total)}*
+
+👤 Nama Pemesan:
+${customerName}
+`;
+
+
+    if (customerNote) {
+
+        message +=
+`
+📝 Catatan:
+${customerNote}
+`;
+
+    }
+
+
+    message +=
+`
+━━━━━━━━━━━━━━━━━━
+
+Pesanan dikirim dari website BAPUK.
+Powered by LyzzStore 🙌
+`;
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        nomorWhatsApp +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+/* ================= JALANKAN ================= */
+
+updateCart();
+
+</script>
+
+</body>
+  </html>
